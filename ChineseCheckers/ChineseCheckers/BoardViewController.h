@@ -10,4 +10,7 @@
 
 @interface BoardViewController : UIViewController
 
+- (void) returnBallToItsOriginalPosition:(id)ball;
+- (BOOL) moveBall:(id)ball toPoint:(CGPoint)point;
+
 @end

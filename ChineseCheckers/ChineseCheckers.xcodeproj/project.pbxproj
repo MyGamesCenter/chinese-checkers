@@ -31,6 +31,8 @@
 		3BB0A8C317964D9D00730CA0 /* ball_glass_grey_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB0A8BF17964D9D00730CA0 /* ball_glass_grey_small.png */; };
 		3BB0A8C417964D9D00730CA0 /* ball_glass_white_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB0A8C017964D9D00730CA0 /* ball_glass_white_small.png */; };
 		3BB0A8C517964D9D00730CA0 /* ball_glass_yellow_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BB0A8C117964D9D00730CA0 /* ball_glass_yellow_small.png */; };
+		3BF35FC0179B06A500C94BE6 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF35FBF179B06A500C94BE6 /* Ball.m */; };
+		3BF35FC2179C2D0600C94BE6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF35FC1179C2D0600C94BE6 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,9 @@
 		3BB0A8BF17964D9D00730CA0 /* ball_glass_grey_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball_glass_grey_small.png; path = Images/ball_glass_grey_small.png; sourceTree = "<group>"; };
 		3BB0A8C017964D9D00730CA0 /* ball_glass_white_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball_glass_white_small.png; path = Images/ball_glass_white_small.png; sourceTree = "<group>"; };
 		3BB0A8C117964D9D00730CA0 /* ball_glass_yellow_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball_glass_yellow_small.png; path = Images/ball_glass_yellow_small.png; sourceTree = "<group>"; };
+		3BF35FBE179B06A500C94BE6 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		3BF35FBF179B06A500C94BE6 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		3BF35FC1179C2D0600C94BE6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF35FC2179C2D0600C94BE6 /* QuartzCore.framework in Frameworks */,
 				3B32924F1795F35600CF15BA /* UIKit.framework in Frameworks */,
 				3B3292511795F35600CF15BA /* Foundation.framework in Frameworks */,
 				3B3292531795F35600CF15BA /* CoreGraphics.framework in Frameworks */,
@@ -103,6 +109,7 @@
 		3B3292421795F35600CF15BA = {
 			isa = PBXGroup;
 			children = (
+				3BF35FC1179C2D0600C94BE6 /* QuartzCore.framework */,
 				3B3292541795F35600CF15BA /* ChineseCheckers */,
 				3B32927B1795F35600CF15BA /* ChineseCheckersTests */,
 				3B32924D1795F35600CF15BA /* Frameworks */,
@@ -137,6 +144,8 @@
 				3B32925E1795F35600CF15BA /* AppDelegate.m */,
 				3B3292661795F35600CF15BA /* MainStoryboard_iPhone.storyboard */,
 				3B3292691795F35600CF15BA /* MainStoryboard_iPad.storyboard */,
+				3BF35FBE179B06A500C94BE6 /* Ball.h */,
+				3BF35FBF179B06A500C94BE6 /* Ball.m */,
 				3B32926C1795F35600CF15BA /* BoardViewController.h */,
 				3B32926D1795F35600CF15BA /* BoardViewController.m */,
 				3BB0A8B11795F3BE00730CA0 /* Images */,
@@ -313,6 +322,7 @@
 				3B32925B1795F35600CF15BA /* main.m in Sources */,
 				3B32925F1795F35600CF15BA /* AppDelegate.m in Sources */,
 				3B32926E1795F35600CF15BA /* BoardViewController.m in Sources */,
+				3BF35FC0179B06A500C94BE6 /* Ball.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

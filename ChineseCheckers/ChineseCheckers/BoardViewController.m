@@ -7,6 +7,7 @@
 //
 
 #import "BoardViewController.h"
+#import "Ball.h"
 
 @interface BoardViewController ()
 
@@ -18,6 +19,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    for (UIView *subview in self.view.subviews) {
+        if ([subview isKindOfClass:[Ball class]]) {
+            subview.userInteractionEnabled = YES;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,4 +38,14 @@
 {
     return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
+
+- (void) returnBallToItsOriginalPosition:(id)ball
+{
+}
+
+- (BOOL) moveBall:(id)ball toPoint:(CGPoint)point
+{
+    return YES;
+}
+
 @end
