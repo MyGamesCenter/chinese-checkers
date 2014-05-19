@@ -13,6 +13,12 @@
 
 @end
 
+// every triangle has it own keyboard
+// so there are six keyboards
+// every position has only two posible moves
+
+
+
 @implementation BoardViewController
 
 - (void)viewDidLoad
@@ -23,6 +29,7 @@
     for (UIView *subview in self.view.subviews) {
         if ([subview isKindOfClass:[Ball class]]) {
             subview.userInteractionEnabled = YES;
+            ((Ball*) subview).board = self;
         }
     }
 }

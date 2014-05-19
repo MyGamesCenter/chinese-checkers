@@ -28,12 +28,6 @@
 @synthesize lastX;
 @synthesize lastY;
 
-
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-
 - (void)restoreToInitialPosition
 {
 	// Bounces the placard back to the center
@@ -114,11 +108,21 @@
 }
 
 //------------------------
+- (void)printLocationTouch:(NSSet *)touches {
+    UITouch *touch = [touches anyObject];
+    if ([touch view] == self) {
+		CGPoint location = [touch locationInView:[self superview]];
+		NSLog(@"x:%f - y:%f", location.x, location.y);
+		return;
+	}
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	m_location = self.center;
+    [self printLocationTouch:touches];
 }
-
+/*
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *touch = [touches anyObject];
@@ -129,7 +133,6 @@
 		[self.superview bringSubviewToFront:self];
 	}
 	
-	// If the touch was in the placardView, move the placardView to its location
 	if ([touch view] == self) {
 		CGPoint location = [touch locationInView:[self superview]];
 		self.center = location;
@@ -167,7 +170,7 @@
 	self.center = m_location;
 	self.transform = CGAffineTransformIdentity;
 }
-
+*/
 //------------------------
 
 
